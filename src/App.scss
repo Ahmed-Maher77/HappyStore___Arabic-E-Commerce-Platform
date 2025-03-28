@@ -1,0 +1,76 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+// ======================= Global Variables =======================
+:root {
+	--main-c: #212528;
+	--white-c: #ffffff;
+	--white-fixed-c: #ffffff;
+	--black-c: #000000;
+	--black-fixed-c: #000000;
+	--gray-c: #a2a2a2;
+	--gray-fixed-c: #a2a2a2;
+	--pink-c: #7b5a64;
+	--pink-fixed-c: #7b5a64;
+	--trans-3: 0.3s;
+	--main-font: "Cairo", sans-serif;
+}
+
+// ======================= Global Styles =======================
+body {
+	font-family: var(--main-font);
+	direction: rtl;
+}
+
+// ======================= Global Classes =======================
+// Colors
+.main-c {
+	color: var(--main-c);
+}
+.white-c {
+	color: var(--white-c);
+}
+.white-fixed-c {
+	color: var(--white-fixed-c);
+}
+.black-c {
+	color: var(--black-c);
+}
+.black-fixed-c {
+	color: var(--black-fixed-c);
+}
+.gray-c {
+	color: var(--gray-c);
+}
+.gray-fixed-c {
+	color: var(--gray-fixed-c);
+}
+.pink-fixed-c {
+	color: var(--pink-fixed-c);
+}
+.pink-c {
+	color: var(--pink-c);
+}
+
+
+
+// sm
+@media (min-width: 640px) {
+	
+}
+// md
+@media (min-width: 768px) {
+	
+}
+// lg
+@media (min-width: 1024px) {
+	
+}
+// xl
+@media (min-width: 1280px) {
+	
+}
+// 2xl
+@media (min-width: 1536px) {
+	
+}
