@@ -10,7 +10,7 @@ const homeSlides = [
 ];
 
 const Home = () => {
-	return <div className="Home-Page">
+	return <div className="Home-Page" style={{height: "calc(100vh - 60px)"}}>
         <LandingSlider slides={homeSlides} />
         
         

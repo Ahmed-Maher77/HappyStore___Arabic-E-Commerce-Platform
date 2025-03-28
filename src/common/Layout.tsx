@@ -1,31 +1,33 @@
-import { Outlet } from "react-router-dom";
-import { useState, useEffect, useCallback } from "react";
-import Navbar from "./Navbar/Navbar";
-import MainLoader from "../components/Loader/MainLoader";
+import { Outlet, useLocation } from "react-router-dom";
+import { useState, useEffect, useCallback, memo } from "react";
 import { useAppDispatch } from "../utils/redux-toolkit/hooks";
 import { setIsMobile } from "../utils/redux-toolkit/windowSlice";
+import Navbar, { permitedRoutes } from "./Navbar/Navbar";
+import MainLoader from "../components/Loader/MainLoader";
+import Footer from "../components/Footer/Footer";
 
 const Layout = () => {
 	const [showLoader, setShowLoader] = useState(true);
-	const dispatch = useAppDispatch();
+    const [showFooter, setShowFooter] = useState(true);
+    const dispatch = useAppDispatch();
+    const location = useLocation();
 
-	// resize handler
+	// Handle window resize
     const handleResize = useCallback(() => {
         dispatch(setIsMobile(window.innerWidth < 992));
     }, [dispatch]);
 
     useEffect(() => {
-        // Set initial isMobile state
-        handleResize();
+        handleResize(); // Set initial mobile state
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, [handleResize]);
 
 	useEffect(() => {
-        // Simulate a loading screen
-        const timer = setTimeout(() => setShowLoader(false), 1000);
+        const timer = setTimeout(() => setShowLoader(false), 1000); // Simulate loading screen
+        setShowFooter(permitedRoutes.includes(location.pathname));
         return () => clearTimeout(timer);
-    }, []);
+    }, [location.pathname]);
 
 	return (
 		<>
@@ -35,6 +37,7 @@ const Layout = () => {
 				<div className="Layout mt-[60px]" role="main">
 					<Navbar />
 					<Outlet />
+					{showFooter && <Footer />}
 				</div>
 			{/* )} */}
 		</>
