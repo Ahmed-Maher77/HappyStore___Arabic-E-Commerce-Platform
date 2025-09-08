@@ -23,11 +23,29 @@ HappyStore is a modern and user-friendly Arabic e-commerce platform designed to 
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, React Router, Tailwind CSS, SCSS
-- **State Management:** Redux Toolkit
-- **HTTP Requests:** Axios
-- **Carousel & Animations:** Swiper.js
-- **Other:** ESLint, Prettier (for code quality)
+### 💻 Used Technologies  
+
+- **Frontend**  
+  - **React.js** → Component-based library for building dynamic UIs.  
+  - **React Router** → Handles client-side navigation between pages.  
+  - **TypeScript** → Adds type safety and reduces runtime errors.  
+  - **Font Awesome** → Scalable icons for consistent UI.  
+
+- **Styling**
+  - **Tailwind CSS** → Utility-first CSS framework for rapid responsive design.  
+  - **SCSS** → Preprocessor for structured, maintainable, and scalable styling.  
+
+- **State Management**  
+  - **Redux Toolkit** → Centralized state management with simplified Redux patterns.  
+
+- **HTTP Requests**  
+  - **Axios** → Simplifies API requests and server communication.  
+
+- **Carousel & Animations**  
+  - **Swiper.js** → Interactive carousels and sliders.  
+
+- **Other Tools**  
+  - **ESLint & Prettier** → Enforces code quality and consistent formatting.  
 
 ---
 
