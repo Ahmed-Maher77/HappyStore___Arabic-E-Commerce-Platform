@@ -23,8 +23,6 @@ HappyStore is a modern and user-friendly Arabic e-commerce platform designed to 
 
 ## 🛠️ Tech Stack
 
-### 💻 Used Technologies  
-
 - **Frontend**  
   - **React.js** → Component-based library for building dynamic UIs.  
   - **React Router** → Handles client-side navigation between pages.  
